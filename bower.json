@@ -1,0 +1,23 @@
+{
+  "name": "MPNet",
+  "license": "MIT",
+  "version": "1.0.0",
+  "dependencies": {
+    "bootstrap": "^3.0.0",
+    "jquery": "^3.0.0",
+    "fontawesome": "latest"
+  },
+  "authors": [
+    "Bruno Rafael <brunorafaelap@gmail.com>"
+  ],
+  "description" : [
+    "A simple application to manage elements CRUD"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

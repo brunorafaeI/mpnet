@@ -1,14 +1,14 @@
 <?php
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+if ($_SERVER['REQUEST_METHOD'] == 'POST') :
 
-    // Verify data with htmlspecialchars
-    $user = htmlspecialchars($_POST['user']);
-    $pwd = htmlspecialchars($_POST['password']);
+    foreach ($_POST as $key => $value) :
+        $$key = htmlspecialchars(ltrim($value));
+    endforeach;
 
-    if (isset($user) && $user == null) {
+    if (!$username) :
         echo 'You need to set a username.';
 
-    }
+    endif;
 
-}
+endif;

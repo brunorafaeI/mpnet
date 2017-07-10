@@ -1,9 +1,9 @@
-<?php 
+<?php
 
 namespace app\Control;
 
 Abstract class Controller {
-    
+
     /*
     * Display the requested page with the requested parameters
     * @param string $name
@@ -20,7 +20,7 @@ Abstract class Controller {
             include_once $thePath;
         } else {
             // Default action
-            echo "Não foi possivel encontrar a pagina.";
+            echo "Page not found. 404 error";
         }
     }
 

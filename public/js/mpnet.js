@@ -1,4 +1,6 @@
 $(function(){
+    'use strict';
+
     $('.button-checkbox').each(function(){
         var $widget = $(this),
             $button = $widget.find('button'),
@@ -57,7 +59,7 @@ $(function(){
     });
 });
 
-
+// Particles effect
 $.getScript("./public/js/particles.min.js", function(){
     particlesJS('particles-js',
       {
@@ -194,7 +196,7 @@ notify = function(container, text, callback, close_callback, style) {
 		text: '×',
 		class: 'button close',
 		style: 'padding-left: 10px;',
-		href: '#',
+		href: 'javascript:void(0)',
 		click: function(e){
 			e.preventDefault()
 			close_callback && close_callback()
@@ -226,8 +228,10 @@ notify = function(container, text, callback, close_callback, style) {
 
 }
 
-
+// Validate datas from form login
 $(function(){
+    'use strict';
+
 
     $('#form-mpnet').submit(function(e){
         e.preventDefault();
@@ -235,8 +239,10 @@ $(function(){
 
         $.post('verifyLogin.php', $form)
         .done(function(data){
-            var container = $('#msg-login');
-            notify(container, data, null, null, 'info');
+            if (data) {
+                var container = $('#msg-login');
+                notify(container, data, null, null, 'info');
+            }
         })
         .fail(function(){
             alert('Error 404 or 500');
@@ -244,6 +250,8 @@ $(function(){
     });
 })
 
+
+// Define the type of object XHR
 function getHTTPObject() {
     if (typeof XMLHttpRequest != 'undefined') {
         return new XMLHttpRequest();

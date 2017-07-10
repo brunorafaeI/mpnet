@@ -12,7 +12,7 @@
                 <div class="form-group">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"> </i></span>
-                        <input type="text" " class="form-control" name="user" placeholder="User">
+                        <input type="text" " class="form-control" name="username" placeholder="User">
                     </div>
                 </div>
                 <div class="form-group">

@@ -18,16 +18,14 @@ class Router
 
         $this->defaultController = new DefaultController();
 
-
     }
 
 
     public function routeRequest(){
 
-
         if(isset($_GET['controller']) && isset($_GET['action'])){
 
-            $path = _CTRLPATH_.ucfirst($_GET['controller'].'Controller.php');
+            $path = _CTRLPATH_.ucfirst($_GET['controller'].'.php');
             $action = $_GET['action'].'Action';
 
             if(file_exists($path)){
@@ -46,7 +44,6 @@ class Router
         }
         else{
             $this->defaultController->indexAction();
-
 
         }
     }
